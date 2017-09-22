@@ -1,27 +1,48 @@
-<p align="center"><a href="https://craftcms.com/" target="_blank"><img width="312" height="90" src="https://craftcms.com/craftcms.svg" alt="Craft CMS"></a></p>
+# MSU Sustainable Agriculture & Food Systems (SAFS)
 
-## About Craft CMS
+9/22/17: Right now, this is just a place to experiment with using Vue to create Craft 3 templates. Eventually this will become the SAFS dev site.
 
-Craft is a content-first CMS that aims to make life enjoyable for developers and content managers alike. It is optimized for bespoke web and application development, offering developers a clean slate to build out exactly what they want, rather than wrestling with a theme.
+Contact: [Katie Fritz](https://katiemfritz.com)
 
-Learn more about Craft at [craftcms.com](https://craftcms.com).
+## Docs
 
-## How to Install Craft 3 Beta
+- MSU UI Library: coming soon
+- [Craft CMS official documentation](https://craftcms.com/docs/introduction)
+- [Craft Stack Exchange forum]
+(https://craftcms.stackexchange.com/)
+- [Craft Slack](https://craftcms.slack.com/messages)
+- [Twig official docs](https://twig.symfony.com/doc/2.x/)
+- [Vue official docs](https://vuejs.org/v2/guide/)
+- [Vue Discord forum](https://vue-land.js.org/)
+- [MSU Web Standards](https://cabs.msu.edu/web/msu-web-standards.html)
 
-Installation instructions can be found in the [Craft 3 documentation](https://github.com/craftcms/docs/blob/master/en/installation.md).
+## Local (Dev) Environment
 
-## Resources
+## Requirements
 
-#### Official Resources
-- [Craft 3 Documentation](https://github.com/craftcms/docs)
-- [Craft 3 Plugins](https://github.com/craftcms/plugins)
-- [Demo site](https://demo.craftcms.com/)
-- [Craft Slack](https://craftcms.com/community#slack)
-- [Craft CMS Stack Exchange](http://craftcms.stackexchange.com/)
+- PHP 7+
+- Composer
+- MySQL
+- way to serve PHP locally*
+- Node
+- NPM
 
-#### Community Resources
-- [Mijingo](https://mijingo.com/craft) – Video courses and other learning resources
-- [Envato Tuts+](https://webdesign.tutsplus.com/categories/craft-cms/courses) – Video courses
-- [Straight Up Craft](http://straightupcraft.com/) – Articles, tutorials, and more
-- [Craft Cookbook](https://craftcookbook.net/) – Quick answers for common tasks
-- [pluginfactory.io](https://pluginfactory.io/) – Craft plugin scaffold generator
+*On Windows, I recommend the latest edition of WampServer or WampServer 64. It includes PHP and MySQL and makes it easy to serve Craft 3 locally. You may need to do a little troubleshooting to get it to run on Windows 10.
+
+Make sure you have the latest versions of these tools for best results.
+
+### Installing
+
+```sh
+git clone ...
+```
+
+```sh
+composer install
+```
+
+```sh
+npm install
+```
+
+
