@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Craft App</title>
+
+{% if craft.config.devMode %}
+<link rel="stylesheet" href="http://safs/css/app.css">
+{% else %}
+<link rel="stylesheet" href="/css/app.css">
+{% endif %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+{% block content %}{% endblock %}
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+{% if craft.config.devMode %}
+<script src="http://safs/js/main.js"></script>
+{% else %}
+<script src="/js/main.js"></script>
+{% endif %}
+</body>
+</html>
