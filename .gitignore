@@ -1,9 +1,9 @@
 .DS_Store
 node_modules/
-dist/
+web/compiled/
 vendor/
-npm-debug.log
-yarn-error.log
+*.log
+*.log.*
 
 # Editor directories and files
 .idea
