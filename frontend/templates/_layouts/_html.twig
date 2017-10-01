@@ -1,0 +1,46 @@
+{#
+ # Layout template
+ # ---------------
+ #
+ # This template defines your site’s global layout. It can be
+ # “extended” by other templates to fill in the gaps.
+ #
+ # See Twig’s Template Inheritance documentation for more details:
+ # http://twig.sensiolabs.org/doc/templates.html#template-inheritance
+ #}
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% if not craft.config.devMode %}
+    <link rel="stylesheet" href="/compiled/css/app.css">
+  {% endif %}
+
+  <title>SAFS
+    {# {% if entry.title is defined %}{{ entry.title }}
+    {% elseif title is defined %}{{ title }}
+    {% else %}{{ siteName }}{% endif %} | {{ socialMedia.siteNickname }} #}
+  </title>
+
+  {# {% include './helpers/_site-meta' %} #}
+</head>
+
+<body>
+  <div id="app">
+
+    {% block layout %}{% endblock %}
+  </div>
+
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  {% if craft.config.devMode %}
+    <script src="http://localhost:8080/compiled/js/app.js"></script>
+  {% else %}
+    <script src="/compiled/js/app.js"></script>
+  {% endif %}
+</body>
+</html>

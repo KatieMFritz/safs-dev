@@ -1,25 +1,18 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <title>Craft App</title>
+{% extends '_layouts/_html' %}
 
-  {% if not craft.config.devMode %}
-    <link rel="stylesheet" href="/compiled/css/app.css">
-  {% endif %}
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+{% block layout %}
 
-<body>
-  <div id="app">
-    {% block content %}{% endblock %}
-  </div>
+  <a class="sr-only" href="#content" accesskey="S">Skip to main content</a>
 
-  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-  {% if craft.config.devMode %}
-    <script src="http://localhost:8080/compiled/js/app.js"></script>
-  {% else %}
-    <script src="/compiled/js/app.js"></script>
-  {% endif %}
-</body>
-</html>
+  {# Header #}
+  <div>Header</div>
+
+  {# Main Content #}
+  <main role="main">
+    {% block main %}{% endblock main %}
+  </main>
+
+  {# Footer #}
+  <div>Footer</div>
+
+{% endblock layout %}

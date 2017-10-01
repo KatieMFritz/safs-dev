@@ -209,6 +209,9 @@ if (process.env.NODE_ENV === 'production') {
   })
 } else {
   webpackConfig = merge(webpackConfig, {
+    output: {
+      publicPath: 'http://localhost:8080/compiled/'
+    },
     module: {
       rules: utils.styleLoaders({ sourceMap: true })
     },
@@ -216,11 +219,17 @@ if (process.env.NODE_ENV === 'production') {
     devtool: '#cheap-module-eval-source-map',
     devServer: {
       hot: true,
+      quiet: true,
+      clientLogLevel: 'none',
+      stats: 'errors-only',
       contentBase: resolve('web'),
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      }
     },
     plugins: [
-      // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
       new webpack.HotModuleReplacementPlugin(),
+      new webpack.NamedModulesPlugin(),
       new webpack.NoEmitOnErrorsPlugin(),
       new FriendlyErrorsPlugin()
     ]

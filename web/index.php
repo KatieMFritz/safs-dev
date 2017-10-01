@@ -18,6 +18,6 @@ if (file_exists($root.'/.env')) {
 // Craft
 define('CRAFT_BASE_PATH', $root);
 define('CRAFT_ENVIRONMENT', getenv('CRAFT_ENVIRONMENT') ?: 'production');
-define('CRAFT_TEMPLATES_PATH', '/frontend/templates');
+define('CRAFT_TEMPLATES_PATH', $root.'/frontend/templates');
 $app = require $root.'/vendor/craftcms/cms/bootstrap/web.php';
 $app->run();

@@ -7,6 +7,6 @@
 
 <style lang="scss" scoped>
 div {
-  color: orange;
+  color: green;
 }
 </style>

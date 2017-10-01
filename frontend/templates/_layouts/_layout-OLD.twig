@@ -1,0 +1,90 @@
+{#
+ # Layout template
+ # ---------------
+ #
+ # This template defines your site’s global layout. It can be
+ # “extended” by other templates to fill in the gaps.
+ #
+ # See Twig’s Template Inheritance documentation for more details:
+ # http://twig.sensiolabs.org/doc/templates.html#template-inheritance
+ #}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>
+    {% if entry.title is defined %}{{ entry.title }}
+    {% elseif title is defined %}{{ title }}
+    {% else %}{{ siteName }}{% endif %} | {{ socialMedia.siteNickname }}
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="home" href="{{ siteUrl }}" />
+
+  {# set seo #}
+  <meta name="description" content="
+    {% if entry.summary is defined %}{{ entry.summary }}
+    {% elseif summary is defined %}{{ summary }}
+    {% else %}{{ socialMedia.summary }}{% endif %}">
+  <meta name="robots" content="
+    {% if metaRobots is defined %}{{ metaRobots }}
+    {% else %}index,follow{% endif %}">
+
+  {# set open graph #}
+  <meta property="og:site_name" content="{{ siteName }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="
+    {% if entry.title is defined %}{{ entry.title }}
+    {% elseif title is defined %}{{ title }}
+    {% else %}{{ siteName }}{% endif %} | {{ socialMedia.siteNickname }}">
+  <meta property="og:url" content="
+    {% if entry.url is defined %}{{ entry.Url }}
+    {% elseif link is defined %}{{ link }}
+    {% else %}{{ siteUrl }}{% endif %}">
+  <meta property="og:image" content="{{ siteUrl }}img/og-default.png">
+  <meta property="og:description" content="{% if entry.summary is defined %}{{ entry.summary }}{% else %}{{ socialMedia.summary }}{% endif %}">
+
+  {% if craft.config.server!='localhost' %}
+    {% includeCssFile siteUrl~'build/app.css' %}
+  {% endif %}
+</head>
+
+<body {% if entry.section.handle is defined %}class="{{ entry.section.handle }}" {% endif %}>
+  <a class="sr-only" href="#content" accesskey="S">Skip to main content</a>
+
+  {% if craft.config.server!='localhost' %}
+    {% requireLogin %}
+  {% endif %}
+
+  {# MSU Masthead #}
+  {% include 'partials/_msu-masthead' %}
+
+  {# Site Name #}
+  <div class="container" id="title">
+    <a href="{{ siteUrl }}"><h1>{{ siteName }}</h1></a>
+  </div>
+
+  {# Site Navigation Navbar #}
+  {% include 'partials/_navbar' %}
+
+  {# Main Content #}
+  <div class="container" id="content" role="main">
+    {% block content %}
+    {% endblock %}
+
+    {# Footer #}
+    {% include 'partials/_footer' %}
+
+  </div><!-- /.container -->
+
+  {# Pull in scripts - to add more javascript, add it in src/app.js #}
+  {% if craft.config.server=='localhost' %}
+    <script src="http://localhost:8080/craftcms/build/app.js"></script>
+  {% else %}
+    <script src="{{ siteUrl }}build/app.js"></script>
+  {% endif %}
+
+</body>
+</html>
