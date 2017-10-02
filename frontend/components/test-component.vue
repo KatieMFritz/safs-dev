@@ -1,7 +1,7 @@
 <template>
   <div>
-    OMG IT'S WORKING
-    <input type="text">
+    <p>OMG IT'S WORKING</p>
+    <slot/>
   </div>
 </template>
 
