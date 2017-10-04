@@ -1,12 +1,16 @@
 <template>
   <blockquote class="m-blockquote">
-    <slot/>
+    <slot>
+      <p>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text, and typically distinguished visually using indentation and a different typeface or smaller size quotation.</p>
+    </slot>
     <footer
       v-if="$slots.source"
       class="m-blockquote__footer"
     >
       <cite class="m-blockquote__cite">
-        <slot name="source"/>
+        <slot name="source">
+          Katie Fritz, Web Developer at <a href="https://katiemfritz.com">Katie M Fritz, LLC</a>
+        </slot>
       </cite>
     </footer>
   </blockquote>

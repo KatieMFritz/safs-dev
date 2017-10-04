@@ -1,13 +1,19 @@
 <template>
-  <p class="m-byline">Published {{ date }} by {{ author }}</p>
+  <p class="m-byline">Published {{ date }} <span v-if="author">by {{ author }}</span></p>
 </template>
 
 <script>
 export default {
- data () {
-    return {
-      date: 'Oct. 4, 2017',
-      author: 'Julie Cotton'
+  // TODO: support real dates
+  props: {
+    date: {
+      type: String,
+      required: true,
+      default: 'Oct. 4, 2017'
+    },
+    author: {
+      type: String,
+      default: 'Julie Cotton'
     }
   }
 }
