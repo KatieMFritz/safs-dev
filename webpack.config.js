@@ -86,6 +86,8 @@ var webpackConfig = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('frontend'),
+      '@images': resolve('frontend/images'),
+      '@variables': resolve('frontend/scss/variables.scss')
     },
     extensions: ['.js', '.vue', '.json'],
     symlinks: false
