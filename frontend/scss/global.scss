@@ -70,7 +70,7 @@ h5, h6 {
   margin: $space-stack-m;
 }
 
-// Lists are in their own section (01_atoms/_a-lists.scss)
+// Less used text elements
 
 small {
   font-size: $font-size-s;
@@ -88,4 +88,40 @@ mark {
 time {
   font-size: $font-size-s;
   font-style: italic;
+}
+
+
+// Links
+a {
+  color: $color-link;
+  text-decoration: none;
+  &:hover, &:focus, &:active {
+    color: $color-link--hover;
+    text-decoration: underline;
+  }
+}
+
+// Lists
+ol, ul {
+  list-style-position: outside;
+  padding-left: $space-l;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+li {
+  margin-bottom: $space-s;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+li > ul, li > ol {
+  margin-top: $space-s;
 }

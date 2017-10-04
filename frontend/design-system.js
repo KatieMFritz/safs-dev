@@ -44,6 +44,15 @@ new Demo('m-blockquote')
     `
 })
 
+new Demo('m-msu-search')
+.example('Default')
+
+new Demo('m-nav-primary')
+.example('Default')
+
+new Demo('o-header')
+.example('Default')
+
 new Demo('o-blog-post')
 .example('Sample', {
   template: `
@@ -54,5 +63,15 @@ new Demo('o-blog-post')
       <p>It has multiple paragraphs.</p>
       <m-blockquote/>
     </o-blog-post>
+  `
+})
+
+new Demo('templates')
+.example('Blog Post', {
+  template: `
+    <body>
+      <o-header/>
+      <o-blog-post/>
+    </body>
   `
 })
