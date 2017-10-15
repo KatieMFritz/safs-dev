@@ -2691,12 +2691,12 @@ eslint-plugin-standard@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-standard/-/eslint-plugin-standard-3.0.1.tgz#34d0c915b45edc6f010393c7eef3823b08565cf2"
 
-eslint-plugin-vue@^3.13.0:
+eslint-plugin-vue@vuejs/eslint-plugin-vue#ad4a56406790e78d8f6a3d86530ede60f1a63ae8:
   version "3.13.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-3.13.0.tgz#77dbe45c42ac56503cc0f2e2612911a439e96304"
+  resolved "https://codeload.github.com/vuejs/eslint-plugin-vue/tar.gz/ad4a56406790e78d8f6a3d86530ede60f1a63ae8"
   dependencies:
     requireindex "^1.1.0"
-    vue-eslint-parser "^2.0.1-beta.0"
+    vue-eslint-parser "^2.0.1-beta.1"
 
 eslint-scope@^3.7.1:
   version "3.7.1"
@@ -6657,7 +6657,7 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue-eslint-parser@^2.0.1-beta.0:
+vue-eslint-parser@^2.0.1-beta.1:
   version "2.0.1-beta.1"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-2.0.1-beta.1.tgz#7e1b3c0865905264605169497fe9e42d27c1ae60"
   dependencies:
