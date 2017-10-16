@@ -7,7 +7,7 @@
             class="m-nav__link"
             :href="siteUrl"
             aria-label="Home">
-            <span class="icon-home"></span>
+            <span class="icon-home"/>
           </a>
         </li>
 
@@ -16,7 +16,9 @@
           :key="item.title"
           class="m-nav__item"
         >
-          <a class="m-nav__link" :href="item.slug">
+          <a
+            class="m-nav__link"
+            :href="item.slug">
             {{ item.title }}
           </a>
         </li>
@@ -38,18 +40,17 @@ export default {
       type: Object,
       default () {
         return {
-          about:      { slug: "javascript:void(0)", title: "About" },
-          resources:  { slug: "javascript:void(0)", title: "Resources" },
-          reqs:       { slug: "javascript:void(0)", title: "Minor Requirements" },
-          blog:       { slug: "javascript:void(0)", title: "Blog" },
-          contact:    { slug: "javascript:void(0)", title: "Contact" }
+          about: { slug: 'javascript:void(0)', title: 'About' },
+          resources: { slug: 'javascript:void(0)', title: 'Resources' },
+          reqs: { slug: 'javascript:void(0)', title: 'Minor Requirements' },
+          blog: { slug: 'javascript:void(0)', title: 'Blog' },
+          contact: { slug: 'javascript:void(0)', title: 'Contact' }
         }
       }
     }
   }
 }
 </script>
-
 
 <style lang="scss">
   @import '~@variables';
@@ -94,5 +95,3 @@ export default {
 /* TODO: Add dropdowns */
 
 </style>
-
-

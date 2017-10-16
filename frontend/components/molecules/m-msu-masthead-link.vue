@@ -1,15 +1,19 @@
 <template>
-  <a href="https://msu.edu" title="Michigan State University Main Website" class="m-logo-link">
-    <a-msu-masthead/>
+  <a
+    href="https://msu.edu"
+    title="Michigan State University Main Website"
+    class="m-logo-link"
+  >
+    <AMsuMasthead/>
   </a>
 </template>
 
 <script>
-import MsuMasthead from '../atoms/a-msu-masthead.vue'
+import AMsuMasthead from '../atoms/a-msu-masthead.vue'
 
 export default {
   components: {
-    MsuMasthead: 'a-msu-masthead'
+    AMsuMasthead
   }
 }
 </script>

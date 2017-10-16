@@ -7,7 +7,7 @@
       type="hidden"
       name="client"
       :value="siteName"
-    />
+    >
     <input
       type="hidden"
       name="sitesearch"
@@ -35,7 +35,7 @@
       type="submit"
       aria-label="Search"
     >
-      <span class="icon-search"></span>
+      <span class="icon-search"/>
     </button>
 
   </form>
@@ -104,6 +104,4 @@ export default {
       @include focus;
     }
   }
-
-
 </style>

@@ -1,23 +1,25 @@
 <template>
   <main>
     <h2>{{ title }}</h2>
-    <m-byline :date="date" :author="author"/>
-    <a-intro-text>
+    <MByline
+      :date="date"
+      :author="author"
+    />
+    <AIntroText>
       <p slot="content">This is the intro to this blog post.</p>
-    </a-intro-text>
+    </AIntroText>
     <slot/>
   </main>
 </template>
 
 <script>
-import IntroText from '../atoms/a-intro-text.vue'
-import Byline from '../molecules/m-byline.vue'
-
+import AIntroText from '../atoms/a-intro-text.vue'
+import MByline from '../molecules/m-byline.vue'
 
 export default {
   components: {
-    IntroText: 'a-intro-text',
-    Byline: 'm-byline'
+    AIntroText,
+    MByline
   },
   data () {
     return {

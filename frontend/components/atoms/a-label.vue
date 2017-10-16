@@ -1,5 +1,8 @@
 <template>
-  <a href="#" class="a-label">
+  <a
+    href="#"
+    class="a-label"
+  >
     <slot>Label 1</slot>
   </a>
 </template>
@@ -34,4 +37,3 @@
     @include background($color-brand-primary);
   }
 </style>
-

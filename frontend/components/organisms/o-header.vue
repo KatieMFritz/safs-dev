@@ -1,20 +1,24 @@
 <template>
   <header class="o-header">
     <section class="o-header__msu">
-      <m-msu-masthead-link/>
-      <m-msu-search/>
+      <MMsuMastheadLink/>
+      <MMsuSearch/>
     </section>
     <h1 class="o-header__site-name">{{ siteName }}</h1>
-    <m-nav-primary/>
+    <MNavPrimary/>
   </header>
 </template>
 
 <script>
-import MsuMastheadLink from '../molecules/m-msu-masthead-link.vue'
+import MMsuMastheadLink from '../molecules/m-msu-masthead-link.vue'
+import MMsuSearch from '../molecules/m-msu-search.vue'
+import MNavPrimary from '../molecules/m-nav-primary.vue'
 
 export default {
   comonents: {
-    MsuMastheadLink: 'm-msu-masthead-link'
+    MMsuMastheadLink,
+    MMsuSearch,
+    MNavPrimary
   },
   data () {
     return {
@@ -23,7 +27,6 @@ export default {
   }
 }
 </script>
-
 
 <style lang="scss">
 
