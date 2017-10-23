@@ -44,5 +44,3 @@ composer install
 ```sh
 npm install
 ```
-
-
