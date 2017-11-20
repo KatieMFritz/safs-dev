@@ -3,7 +3,7 @@
  * Craft web bootstrap file
  */
 
-define('CRAFT_SITE', 'safs');
+define('CRAFT_SITE', 'effs');
 
 // Project root path
 $root = dirname(__DIR__);
