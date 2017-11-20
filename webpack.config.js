@@ -54,7 +54,7 @@ var utils = {
     // https://vue-loader.vuejs.org/en/configurations/extract-css.html
     return {
       css: generateLoaders(),
-      scss: generateLoaders('sass'),
+      scss: generateLoaders('sass')
     }
   },
 
@@ -158,7 +158,7 @@ var webpackConfig = {
       'process.env': {
         NODE_ENV: '"' + (process.env.NODE_ENV || 'development') + '"'
       }
-    }),
+    })
   ]
 }
 

@@ -42,5 +42,5 @@ composer install
 ```
 
 ```sh
-npm install
+yarn install
 ```
