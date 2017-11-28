@@ -1,12 +1,12 @@
-<template>
+<template slot-scope="props">
   <main>
     <h2>{{ title }}</h2>
     <MByline
-      :date="date"
       :author="author"
+      :date="date"
     />
     <AIntroText>
-      <p slot="content">This is the intro to this blog post.</p>
+      <p slot="content">{{ intro }}</p>
     </AIntroText>
     <slot/>
   </main>
@@ -21,11 +21,22 @@ export default {
     AIntroText,
     MByline
   },
-  data () {
-    return {
-      title: 'Blog post title',
-      date: 'today',
-      author: 'Katie Fritz'
+  props: {
+    author: {
+      type: String,
+      required: true
+    },
+    date: {
+      type: String,
+      required: true
+    },
+    intro: {
+      type: String,
+      required: false
+    },
+    title: {
+      type: String,
+      required: true
     }
   }
 }

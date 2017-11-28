@@ -28,7 +28,37 @@ new Demo('a-msu-wordmark')
   .example('Default')
 
 new Demo('m-byline')
-  .example('Default')
+  .example('Date and Author', {
+    template: `
+      <m-byline
+        date="today"
+        author="Julie Cotton"
+      >
+      </m-byline>
+    `
+  })
+  .example('Only Date', {
+    template: `
+      <m-byline
+        date="December 1, 2017"
+      >
+      </m-byline>
+    `
+  })
+  .example('Only Author', {
+    template: `
+      <m-byline
+        author="Julie"
+      >
+      </m-byline>
+    `
+  })
+  .example('No Data', {
+    template: `
+      <m-byline>
+      </m-byline>
+    `
+  })
 
 new Demo('m-blockquote')
   .example('Default')
@@ -57,11 +87,13 @@ new Demo('o-blog-post')
   .example('Sample', {
     template: `
       <o-blog-post
+        author="Katie Fritz"
+        date="December 1, 2017"
+        intro="A long time ago, in a galaxy far, far away..."
         title="My awesome blog post"
       >
         <p>This is the blog post content. Isn't it interesting?</p>
         <p>It has multiple paragraphs.</p>
-        <m-blockquote/>
       </o-blog-post>
     `
   })
@@ -70,8 +102,8 @@ new Demo('templates')
   .example('Blog Post', {
     template: `
       <body>
-        <o-header/>
-        <o-blog-post/>
+        <o-header></o-header>
+        <o-blog-post>
       </body>
     `
   })

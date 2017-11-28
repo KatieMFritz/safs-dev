@@ -1,0 +1,12 @@
+{% extends '_layouts/_master' %}
+
+{% block main %}
+  <o-blog-post
+    author="{{ entry.author }}"
+    date="{{ entry.postDate|date("m/d/Y") }}"
+    title="{{ entry.title }}"
+  >
+    {{ entry.plainContent }}
+  </o-blog-post>
+
+{% endblock %}

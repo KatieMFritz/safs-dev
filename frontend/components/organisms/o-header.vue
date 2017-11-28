@@ -15,7 +15,7 @@ import MMsuSearch from '../molecules/m-msu-search.vue'
 import MNavPrimary from '../molecules/m-nav-primary.vue'
 
 export default {
-  comonents: {
+  components: {
     MMsuMastheadLink,
     MMsuSearch,
     MNavPrimary
