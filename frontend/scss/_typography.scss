@@ -1,0 +1,159 @@
+/* typefaces */
+
+$sans-serif-font: 'Gotham SSm A',
+'Gotham SSm B',
+sans-serif;
+$sans-serif-font-large: 'Gotham A',
+'Gotham B',
+sans-serif;
+$sans-serif-font-heavy: 'Gotham B',
+arial black,
+sans-serif;
+$serif-font: 'Times New Roman',
+Times,
+serif;
+$code-font: monospace,
+monospace;
+body {
+    font-family: $sans-serif-font;
+}
+
+h1 {
+    font-family: $sans-serif-font;
+    color: $msu-green;
+    main & {
+        letter-spacing: 0rem;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        color: $msu-green;
+        @media screen and (max-width: 414px) {
+            font-size: 1.75rem;
+        }
+    }
+}
+
+h2 {
+    font-family: $sans-serif-font;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: $msu-green;
+    main & {
+        font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+        letter-spacing: 0;
+        font-size: 1.625rem;
+        margin-bottom: 0.6875rem;
+    }
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-family: $sans-serif-font;
+    letter-spacing: 0;
+    font-weight: 700;
+    color: $msu-green;
+    main & {
+        font-size: 1.375rem;
+    }
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-family: $sans-serif-font;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: $msu-green;
+}
+
+ol,
+p,
+ul,
+dl {
+    font-family: $sans-serif-font;
+    font-size: 0.9375rem;
+    color: #444;
+}
+
+li {
+    li {
+        list-style-type: circle;
+        li {
+            list-style-type: square;
+        }
+    }
+}
+
+dl {
+    dt {
+        margin-bottom: 0;
+    }
+    dd {
+        margin-bottom: .3rem;
+    }
+}
+
+main {
+    div>ol,
+    div>ul {
+        padding-left: 22px;
+    }
+}
+
+a {
+    color: $msu-green;
+    outline: 0;
+    text-decoration: underline;
+    &:visited {
+        color: $msu-green;
+        text-decoration: none;
+        outline: 0;
+    }
+    &:focus,
+    &:hover {
+        color: $msu-green;
+        text-decoration: none;
+    }
+}
+
+p a {
+    line-height: inherit;
+    &:visited {
+        line-height: inherit;
+    }
+}
+
+.lead {
+    font-size: 115%;
+}
+
+:focus {
+    outline: -webkit-focus-ring-color auto 5px!important;
+}
+
+:-moz-focusring {
+    outline: 2px dotted;
+}
+
+hr {
+    max-width: 100%;
+    width: 100%;
+    height: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid #eee;
+    border-left: 0;
+    margin: 1.25rem auto;
+    clear: both;
+}
+
+img.float-right {
+    margin: 0 0 15px 15px!important;
+    
+}
+img.float-left {
+     margin: 0 15px 15px 0!important;
+}

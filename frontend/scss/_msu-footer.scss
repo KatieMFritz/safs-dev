@@ -1,0 +1,103 @@
+// Based off of Zurb Foundation 6
+.footer {
+    width: 100%;
+    padding: 0.4em 0;
+    color: $msu-green;
+    @media screen and (max-width: 768px) {
+        margin-bottom: 50px;
+    }
+    &__standard {
+        margin-top: 2em;
+        @media screen and (max-width: 640px) {
+            margin-top: 1em;
+        }
+    }
+    &__info {
+        display: inline-block;
+        margin-bottom: 1.25em;
+        &__links {
+            // row off main footer links
+            margin: 0 0 6px;
+            line-height: 0.5;
+            padding: 0 0 8px;
+            border-bottom: 1px dotted grey;
+            @media screen and (max-width: 722px) {
+                line-height: 1.7;
+            }
+            @media screen and (max-width: 640px) {
+                line-height: 2.1;
+                text-align: center;
+            }
+            li {
+                display: inline-block;
+                font-size: 0.8rem;
+                @media screen and (max-width: 640px) {
+                    display: block;
+                }
+                &:first-child {
+                    padding: 0;
+                }
+                &:last-child a {
+                    border-right: none;
+                }
+                a {
+                    text-decoration: none;
+                    padding-right: 8px;
+                    margin-right: 4px;
+                    color: $msu-green;
+                    border-right: 1px solid $msu-green;
+                    @media screen and (max-width: 640px) {
+                        border-right: none;
+                        padding: 4px 8px;
+                        margin-right: 0;
+                    }
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        &__copyright,
+        &__msu {
+            // global footer calls-to-action
+            font-size: 0.6rem;
+            padding-top: 0;
+            height: 10px;
+            margin: 0 0 4px;
+            padding: 0;
+            color: $msu-green;
+            li {
+                margin-bottom: 0;
+                line-height: 10px;
+                display: inline;
+                border-right: 1px solid #999;
+                padding: 0 8px 0 4px;
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:last-child {
+                    border-right: 0;
+                }
+                a {
+                    text-decoration: none;
+                    color: #4c7e00;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            img.print-msuwordmark {
+                display: none;
+            }
+            @media screen and (max-width:722px) {
+                height: auto;
+            }
+        }
+    }
+    &__wordmark {
+        display: inline-block;
+        float: left !important;
+        width: 235px;
+        margin: 0 20px 10px 0;
+    }
+}

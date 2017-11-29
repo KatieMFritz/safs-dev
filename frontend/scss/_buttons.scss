@@ -1,0 +1,96 @@
+// button overrides for foundation 6 default buttons
+$button-hover-bg: #00664f;
+$button-hover-color: #fefefe;
+.button {
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    cursor: pointer;
+    -webkit-appearance: none;
+    transition: background-color 0.2s ease-out, color 0.1s ease-out;
+    vertical-align: middle;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 0.55em 2em 0.60em;
+    letter-spacing: 1px;
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: $msu-green;
+    color: $white;
+    text-decoration: none;
+    &:visited {
+        color: $white;
+        text-decoration: none;
+        outline: 0;
+    }
+    &:hover {
+        background-color: $button-hover-bg;
+        text-decoration: none;
+        color: $button-hover-color;
+    }
+    &:focus {
+        background-color: $button-hover-bg;
+        color: $button-hover-color;
+    }
+    &.tiny {
+        font-size: 0.625rem;
+    }
+    &.small {
+        font-size: 0.75rem;
+    }
+    &.large {
+        font-size: 1.25rem;
+    }
+    &.expanded {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    &.pill {
+        border-radius: 50px;
+    }
+    &.hollow {
+        background-color: transparent;
+        border: 2px solid $msu-green;
+        color: $msu-green; // padding: 0.8rem 2rem.75rem 2rem;
+        &:visited {
+            color: $msu-green;
+            text-decoration: none;
+            outline: 0;
+        }
+        &:hover {
+            background-color: $button-hover-bg;
+            border: 2px solid $button-hover-bg;
+            text-decoration: none;
+            color: $button-hover-color;
+        }
+        &:focus {
+            background-color: $button-hover-bg;
+            border-color: $button-hover-bg;
+            color: $button-hover-color;
+        }
+    }
+    &.inverted {
+        background-color: transparent;
+        border: 2px solid $white;
+        color: $white; // padding: 0.8rem 2rem.75rem 2rem;
+        &:visited {
+            color: $white;
+            text-decoration: none;
+            outline: 0;
+        }
+        &:hover {
+            background-color: $white;
+            border: 2px solid $white;
+            text-decoration: none;
+            color: $msu-green;
+        }
+        &:focus {
+            background-color: $white;
+            border-color: $white;
+            color: $msu-green;
+        }
+    }
+}

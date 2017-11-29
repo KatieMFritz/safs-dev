@@ -1,0 +1,72 @@
+// breadcrumbs
+#breadcrumbs {
+    margin-bottom: 45px;
+    @media screen and (max-width: 1024px) {
+        margin-bottom: 30px;
+    }
+    ul {
+        list-style-type: none; //display: table-row;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        position: relative;
+        display: inline-block;
+        float: left;
+        padding: 0;
+        margin: 0;
+        font-size: 0.8125rem;
+        padding-right: 7px; // display: table-cell;
+        // vertical-align: middle;
+        color: #ccc;
+        &::after {
+            content: "/";
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            margin-top: 0;
+            right: 0;
+        }
+        a {
+            // display: table-cell;
+            line-height: 14px;
+            height: 14px;
+            padding: 10px 6px;
+            height: 14px;
+            color: #686868;
+            text-decoration: none;
+            &:hover {
+                color: $msu-green;
+                text-decoration: underline;
+            }
+            &:active {
+                color: $msu-green;
+            }
+            &:focus {
+                color: $msu-green;
+            }
+        }
+        &:first-child {
+            a {
+                line-height: 14px;
+                height: 16px;
+                display: block;
+                width: 20px;
+                background: url("https://cdn.cabs.msu.edu/framework/images/ico-home.svg") no-repeat 0 1px;
+                background-size: 15px;
+            }
+        } // &:last-child {
+        //     padding-left: 6px;
+        //     padding-top: 3px;
+        //     color: $msu-green;
+        //     font-weight: bold;
+        //     line-height: 14px;
+        //     height: 14px;
+        //
+        //     &::after {
+        //         content: none;
+        //     }
+        // } 
+    }
+}

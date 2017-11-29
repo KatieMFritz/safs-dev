@@ -1,0 +1,485 @@
+// Based off of Zurb Foundation 6. Includes styles for sticky header, which also requires associated custom JavaScript/jQuery
+.template {
+    $template: &;
+    &__header {
+        min-height: 58px;
+    }
+    &__sticky-header {
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 12px 0 13px; //position: initial;
+        background-color: rgba(255, 255, 255, 0); // resets background color of sticky masthead (mobile)
+        transition: background-color 0.8s; // animation for above
+        &--fixed {
+            // sticky masthead state
+            //display: none;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; // padding: 12px 0 13px;
+            //background: none; // clears hero gradient in prep for sticky masthead background color
+            background-color: rgba(255, 255, 255, .95); // sticky masthead background color (mobile)
+            transition: background-color 0.8s; // animation for sticky masthead background color
+            box-shadow: 0 1px 12px 1px rgba(0, 0, 0, .2); // animation-fill-mode: both;
+            // will-change: transform,opacity;
+            #{$template}__logo {
+                &.masthead-sticky {
+                    display: inline-block!important;
+                }
+                &.masthead-reg {
+                    display: none!important;
+                }
+            }
+            .hamburger-inner,
+            .hamburger-inner::after,
+            .hamburger-inner::before {
+                background-color: $msu-green!important;
+            }
+        }
+    }
+    header {
+        // padding: 12px 0 0;
+        position: initial;
+        width: 100%;
+        z-index: 15;
+        @media screen and (max-width: 1024px) {
+            // padding: 12px 0 13px;
+            position: absolute;
+        }
+        #{$template}__logo {
+            &--no-helmet {
+                margin-top: 9px;
+                width: 285px!important;
+            }
+            max-width: none;
+            width: 295px;
+            @media only screen and (max-width: 414px) {
+                width: 275px;
+            }
+            @media only screen and (max-width: 320px) {
+                width: 250px;
+            }
+        }
+        .hamburger-box {
+            width: 35px;
+        }
+        .hamburger-inner,
+        .hamburger-inner::after,
+        .hamburger-inner::before {
+            width: 35px;
+            height: 3px;
+            background-color: $white; // hamburger button lines' color
+        }
+        h1,
+        h2 {
+            font-size: 1.3125rem;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 1.2;
+            margin: 2px 0 17px;
+            span {
+                display: block;
+                font-weight: 300;
+                font-size: 1.125rem;
+                @media only screen and (max-width: 414px) {
+                    font-size: .9375rem;
+                }
+            }
+            @media only screen and (max-width: 414px) {
+                font-size: 1.0625rem;
+            }
+            a {
+                text-decoration: none;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &--home {
+        header {
+            // padding: 12px 0 13px;
+            position: absolute;
+            background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+            background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+            #{$template}__logo {
+                &.masthead-sticky {
+                    display: none;
+                }
+                &.masthead-reg {
+                    display: inline-block;
+                }
+            }
+            h1,
+            h2 {
+                color: $white;
+                a {
+                    color: $white;
+                    &:visited {
+                        color: $white;
+                    }
+                    &:hover {
+                        color: #e6e3e1;
+                    }
+                }
+            }
+        }
+    }
+    &--child {
+        background: -moz-linear-gradient(top, rgba(203, 212, 210, 0.94) 0%, rgba(255, 255, 255, 0.72) 23%, rgba(255, 255, 255, 0) 100%) no-repeat;
+        background: -webkit-linear-gradient(top, rgba(203, 212, 210, 0.94) 0%, rgba(255, 255, 255, 0.72) 23%, rgba(255, 255, 255, 0) 100%) no-repeat;
+        background: linear-gradient(to bottom, rgba(203, 212, 210, 0.94) 0%, rgba(255, 255, 255, 0.72) 23%, rgba(255, 255, 255, 0) 100%) no-repeat;
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0cbd4d2', endColorstr='#00ffffff', GradientType=0);
+        header {
+            position: relative;
+            #{$template}__logo {
+                &.masthead-sticky {
+                    display: inline-block;
+                    @media screen and (max-width: 1024px) {
+                        display: inline-block;
+                    }
+                }
+                &.masthead-reg {
+                    display: none;
+                    @media screen and (max-width: 1024px) {
+                        display: none;
+                    }
+                }
+            }
+            .hamburger-inner,
+            .hamburger-inner::after,
+            .hamburger-inner::before {
+                background-color: $msu-green; // hamburger button lines' color
+            }
+            h1,
+            h2 {
+                @media screen and (max-width: 1024px) {
+                    color: $msu-green;
+                    max-height: 55px;
+                }
+                a {
+                    color: $msu-green;
+                    @media screen and (max-width: 1024px) {
+                        color: $msu-green;
+                    }
+                    text-decoration: none;
+                    &:visited {
+                        color: $msu-green;
+                        @media screen and (max-width: 1024px) {
+                            color: $msu-green;
+                        }
+                    }
+                    &:hover {
+                        text-decoration: none;
+                        color: #00664f;
+                        @media screen and (max-width: 1024px) {
+                            color: #00664f;
+                        }
+                    }
+                }
+            }
+        }
+        #{$template}__photo {
+            height: 0;
+            @media only screen and (max-width: 768px) {
+                height: 0;
+            }
+            @media only screen and (max-width: 414px) {
+                height: 0;
+            }
+        }
+        &-photo {
+            background: none;
+            header {
+                background: none;
+                @media screen and (max-width: 1024px) {
+                    position: absolute;
+                    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+                    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+                }
+                #{$template}__logo {
+                    &.masthead-sticky {
+                        display: inline-block;
+                        @media screen and (max-width: 1024px) {
+                            display: none;
+                        }
+                    }
+                    &.masthead-reg {
+                        display: none;
+                        @media screen and (max-width: 1024px) {
+                            display: inline-block;
+                        }
+                    }
+                }
+                .hamburger-inner,
+                .hamburger-inner::after,
+                .hamburger-inner::before {
+                    background-color: $msu-green; // hamburger button lines' color
+                    @media screen and (max-width: 1024px) {
+                        background-color: $white; // hamburger button lines' color
+                    }
+                }
+                h1,
+                h2 {
+                    @media screen and (max-width: 1024px) {
+                        color: $white;
+                    }
+                    a {
+                        color: $msu-green;
+                        @media screen and (max-width: 1024px) {
+                            color: $white;
+                        }
+                        text-decoration: none;
+                        &:visited {
+                            color: $msu-green;
+                            @media screen and (max-width: 1024px) {
+                                color: $white;
+                            }
+                        }
+                        &:hover {
+                            text-decoration: none;
+                            color: #00664f;
+                            @media screen and (max-width: 1024px) {
+                                color: #e6e3e1;
+                            }
+                        }
+                    }
+                }
+            }
+            #{$template}__photo {
+                height: 132px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: 50% 0;
+                @media only screen and (max-width: 768px) {
+                    height: 180px;
+                }
+                @media only screen and (max-width: 414px) {
+                    height: 180px;
+                }
+            }
+        }
+    }
+    &__photo {
+        position: relative;
+        margin-bottom: 24px;
+        text-align: center;
+        overflow: hidden;
+        &__text {
+            position: absolute;
+            width: 100%;
+            max-width: 600px;
+            color: $white;
+            padding-left: 0.625rem;
+            padding-right: 0.625rem; // left: 50%;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            will-change: transform;
+            @media only screen and (max-width: 768px) {
+                top: 40%;
+            }
+            @media only screen and (max-width: 600px) {
+                max-width: none;
+            }
+            @media only screen and (max-width: 414px) {
+                top: 40%;
+            }
+            h2 {
+                color: $white;
+                text-transform: uppercase;
+                font-size: 2.25rem;
+                letter-spacing: 0.3rem;
+                line-height: 1.2;
+                margin-bottom: 8px;
+                font-weight: 600;
+                @media only screen and (max-width: 768px) {
+                    font-size: 5.25vw!important;
+                    letter-spacing: 0.5rem;
+                    line-height: 1.4;
+                }
+                @media only screen and (max-width: 414px) {
+                    font-size: 5.25vw;
+                }
+            }
+            p {
+                color: $white;
+                font-size: 1.1rem;
+                font-weight: 500;
+                @media only screen and (max-width: 414px) {
+                    font-size: 0.9375rem;
+                }
+            }
+        }
+        @media only screen and (max-width: 640px) {
+            .columns {
+                padding-right: 0;
+            }
+        }
+    }
+    &--home {
+        #{$template}__photo {
+            height: 650px;
+            .orbit-wrapper {
+                height: 100%;
+                ul {
+                    height: 100%!important;
+                }
+            }
+            .orbit-slide {
+                height: 100%;
+                max-height: 100%!important;
+            }
+            .orbit-previous {
+                height: 48px;
+                width: 48px;
+                background-image: url("https://cdn.cabs.msu.edu/framework/images/ico-left-arrow-white.svg");
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 46px;
+                @media only screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+            .orbit-next {
+                height: 48px;
+                width: 48px;
+                background-image: url("https://cdn.cabs.msu.edu/framework/images/ico-right-arrow-white.svg");
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 46px;
+                @media only screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+            @media only screen and (max-width: 768px) {
+                height: 480px;
+            } // @media only screen and (max-width: 414px) {
+            //     height: 370px;
+            // }
+            .orbit-bullets {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                button {
+                    width: 0.9375rem;
+                    height: 0.9375rem;
+                }
+            }
+        }
+    }
+}
+
+// sticky header on scroll up http://wicky.nillia.ms/headroom.js/
+.headroom {
+    will-change: transform;
+    &--pinned {
+        transform: translateY(0%);
+    }
+    &--top {
+        position: initial;
+        background-color: rgba(255, 255, 255, 0); // resets background color of sticky masthead (mobile)
+        transition: background-color 0.5s; // animation for above
+        box-shadow: none;
+    }
+    &--not-top {
+        position: fixed;
+        top: 0;
+        background-color: rgba(255, 255, 255, .95); // sticky masthead background color (mobile)
+        transition: transform 250ms linear, background-color 0.5s; // animation for sticky masthead background color
+        box-shadow: 0 1px 12px 1px rgba(0, 0, 0, .2); // animation-fill-mode: both;
+        // will-change: transform,opacity;
+        img.masthead-sticky {
+            display: inline-block!important;
+        }
+        img.masthead-reg {
+            display: none!important;
+        }
+        .hamburger-inner,
+        .hamburger-inner::after,
+        .hamburger-inner::before {
+            background-color: $msu-green!important;
+        }
+    }
+    &--unpinned {
+        transform: translateY(-100%);
+    }
+}
+
+#search {
+    //position: relative;
+    width: 319px;
+    background: $white;
+    border: 1px solid #979797;
+    border-radius: 3px;
+    float: right;
+    padding: 0;
+    margin-top: 3px;
+    height: 30px;
+    display: block;
+    input#q {
+        padding-left: 8px;
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+        color: #444;
+        font-size: 0.75rem;
+        font-weight: 400;
+        float: left;
+        height: 28px;
+        width: 276px;
+        outline: 0;
+        &::-webkit-input-placeholder {
+            color: #666 !important;
+        }
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            color: #666 !important;
+            opacity: 1;
+        }
+        &:-ms-input-placeholder {
+            color: #666 !important;
+        }
+        &:-moz-placeholder {
+            /* Firefox 19+ */
+            color: #666 !important;
+            opacity: 1;
+        }
+    }
+    &.mobile {
+        width: auto;
+        margin: 14px 1.25rem;
+        float: none;
+        display: none;
+        input#q {
+            width: 188px;
+        }
+    }
+}
+
+#btn_search {
+    height: 28px;
+    width: 34px;
+    line-height: normal;
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    float: right;
+    margin: 0 auto;
+    text-indent: -9999px;
+    text-transform: uppercase;
+    border-radius: 0 3px 3px 0;
+    background: url("https://cdn.cabs.msu.edu/brand/images/ico-search.svg") center 8px no-repeat;
+    background-size: 12px 12px;
+    &:hover {
+        -moz-box-shadow: inset 0 0 60px rgba(0, 0, 0, .3);
+        -webkit-box-shadow: inset 0 0 60px rgba(0, 0, 0, .3);
+        box-shadow: inset 0 0 60px rgba(0, 0, 0, .3);
+    }
+}
