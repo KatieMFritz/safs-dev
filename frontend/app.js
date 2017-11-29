@@ -1,6 +1,7 @@
 import Vue from 'vue'
 
-import './scss/global.scss'
+import '@assets/msu-branded-framework/css/vendor.min.css'
+import '@assets/msu-branded-framework/css/main.min.css'
 import './components'
 
 Vue.config.productionTip = false

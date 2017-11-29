@@ -11,7 +11,7 @@
 
 <script>
 import MMsuMastheadLink from '../molecules/m-msu-masthead-link.vue'
-import MMsuSearch from '../molecules/m-msu-search.vue'
+import MMsuSearch from '../atoms/a-msu-search.vue'
 import MNavPrimary from '../molecules/m-nav-primary.vue'
 
 export default {

@@ -2,7 +2,7 @@
   <a
     href="https://msu.edu"
     title="Michigan State University Main Website"
-    class="m-logo-link"
+    class="small-6 columns"
   >
     <AMsuMasthead/>
   </a>

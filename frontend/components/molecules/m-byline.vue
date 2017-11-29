@@ -1,9 +1,9 @@
 <template>
-  <p class="m-byline">
+  <h4>
     Published
     <span v-if="date"> {{ date }}</span>
     <span v-if="author"> by {{ author }}</span>
-  </p>
+  </h4>
 </template>
 
 <script>

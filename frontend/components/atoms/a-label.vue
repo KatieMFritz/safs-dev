@@ -1,7 +1,7 @@
 <template>
   <a
     href="#"
-    class="a-label"
+    class="tiny button"
   >
     <slot>Label 1</slot>
   </a>

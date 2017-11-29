@@ -14,9 +14,10 @@ module.exports = (baseConfig, env) => {
     resolve: appConfig.resolve,
     // Use rules settings
     module: {
-      rules: appConfig.module.rules.filter(rule => {
-        return rule.use && rule.use[0] === 'vue-style-loader'
-      })
+      // HACK: Had to remove this for now to get MSU's CSS working
+      // rules: appConfig.module.rules.filter(rule => {
+      //   return (rule.use && rule.use[0] === 'vue-style-loader'
+      // })
     }
   })
 

@@ -1,10 +1,11 @@
 <template>
-  <img
-    class="a-msu-wordmark"
-    alt="Michigan State University Wordmark"
-    width="221"
-    src="../../images/msu/msu-wordmark-green.svg"
-  >
+  <div class="footer__wordmark">
+    <img
+      alt="Michigan State University wordmark"
+      width="221"
+      src="https://cdn.cabs.msu.edu/brand/images/msu-wordmark-green.svg"
+    >
+  </div>
 </template>
 
 <style>

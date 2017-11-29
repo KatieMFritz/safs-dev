@@ -24,8 +24,40 @@ new Demo('a-intro-text')
 new Demo('a-msu-masthead')
   .example('Default')
 
+new Demo('a-msu-search')
+  .example('Default')
+
 new Demo('a-msu-wordmark')
   .example('Default')
+
+new Demo('a-site-title')
+  .example('SAFS', {
+    template: `
+      <a-site-title
+        siteName="Sustainable Agriculture and Food Systems"
+      >
+      </a-site-title>
+    `
+  })
+  .example('Two lines', {
+    template: `
+      <a-site-title
+        siteName="Michigan State University"
+        siteNameLine2="Sustainable Agriculture and Food Systems"
+      >
+      </a-site-title>
+    `
+  })
+  .example('Three lines', {
+    template: `
+      <a-site-title
+        siteName="Michigan State University"
+        siteNameLine2="Sustainable Agriculture and Food Systems"
+        siteNameLine3="Random Third Line"
+      >
+      </a-site-title>
+    `
+  })
 
 new Demo('m-byline')
   .example('Date and Author', {
@@ -65,8 +97,7 @@ new Demo('m-blockquote')
   .example('Sample', {
     template: `
       <m-blockquote>
-        <p>Here is some different blockquote text.</p>
-
+        Here is some different blockquote text.
         <template slot="source">
           Anonymous
         </template>
@@ -74,10 +105,13 @@ new Demo('m-blockquote')
       `
   })
 
-new Demo('m-msu-search')
+new Demo('m-nav-primary')
   .example('Default')
 
-new Demo('m-nav-primary')
+new Demo('m-utilities')
+  .example('Default')
+
+new Demo('o-template-header')
   .example('Default')
 
 new Demo('o-header')
