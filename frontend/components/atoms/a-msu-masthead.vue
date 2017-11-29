@@ -7,7 +7,7 @@
 </template>
 
 <style>
-  .a-msu-masthead {
+  /* .a-msu-masthead {
     width: 100%;
-  }
+  } */
 </style>

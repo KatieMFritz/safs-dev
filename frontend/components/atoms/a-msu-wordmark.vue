@@ -8,7 +8,7 @@
 </template>
 
 <style>
-  .a-msu-wordmark {
+  /* .a-msu-wordmark {
     width: 100%;
-  }
+  } */
 </style>

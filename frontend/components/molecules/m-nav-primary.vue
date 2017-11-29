@@ -53,45 +53,45 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '~@variables';
+//   @import '~@variables';
 
-  .m-nav__list {
-    //background-color: skyblue;
-    display: block;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+//   .m-nav__list {
+//     //background-color: skyblue;
+//     display: block;
+//     list-style: none;
+//     margin: 0;
+//     padding: 0;
+//   }
 
-  .m-nav__item {
-    display: inline-table;
-  }
+//   .m-nav__item {
+//     display: inline-table;
+//   }
 
-  /* styles just for primary nav */
-  .m-nav--primary {
-    background-color: $color-yellow-green-contrast;
-    .m-nav__list {
-      float: left;
-      padding: $space-s 0;
-    }
-    .m-nav__item {
-      float: left;
-      padding: $space-inset-squish-m;
-      margin: 0;
-    }
-    .m-nav__link {
-      color: $color-white;
-      font-weight: 700;
-      text-transform: uppercase;
-      &:hover, &:focus, &.is-active {
-        background-color: $color-msu-green;
-        text-decoration: none;
-      }
-    }
-  }
+//   /* styles just for primary nav */
+//   .m-nav--primary {
+//     background-color: $color-yellow-green-contrast;
+//     .m-nav__list {
+//       float: left;
+//       padding: $space-s 0;
+//     }
+//     .m-nav__item {
+//       float: left;
+//       padding: $space-inset-squish-m;
+//       margin: 0;
+//     }
+//     .m-nav__link {
+//       color: $color-white;
+//       font-weight: 700;
+//       text-transform: uppercase;
+//       &:hover, &:focus, &.is-active {
+//         background-color: $color-msu-green;
+//         text-decoration: none;
+//       }
+//     }
+//   }
 
-/* TODO: Add mobile nav */
+// /* TODO: Add mobile nav */
 
-/* TODO: Add dropdowns */
+// /* TODO: Add dropdowns */
 
 </style>

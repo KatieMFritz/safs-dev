@@ -57,51 +57,51 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '~@variables';
+  // @import '~@variables';
 
-  /* MSU Search Tool
-  * @http://cabs.msu.edu/web/msu-web-standards.html#s4
-  */
+  // /* MSU Search Tool
+  // * @http://cabs.msu.edu/web/msu-web-standards.html#s4
+  // */
 
-  .m-form--search {
-    border: 1px solid #666;
-    border-radius: $border-radius;
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    width: 100%;
-    max-width: 319px;
-    max-height: 30px;
-  }
+  // .m-form--search {
+  //   border: 1px solid #666;
+  //   border-radius: $border-radius;
+  //   display: flex;
+  //   justify-content: space-between;
+  //   padding: 0;
+  //   width: 100%;
+  //   max-width: 319px;
+  //   max-height: 30px;
+  // }
 
-  input[type="text"].m-form--search__input {
-    border: none;
-    line-height: 1;
-    margin: 0;
-    padding: $space-inset-squish-s;
-    width: 100%;
-    &:focus {
-      @include no-focus;
-    }
-  }
+  // input[type="text"].m-form--search__input {
+  //   border: none;
+  //   line-height: 1;
+  //   margin: 0;
+  //   padding: $space-inset-squish-s;
+  //   width: 100%;
+  //   &:focus {
+  //     @include no-focus;
+  //   }
+  // }
 
-  .m-form--search__button {
-    background: transparent;
-    border: none;
-    border-radius: $border-radius;
-    flex-shrink: 0;
-    .icon-search {
-      color: #666;
-    }
-    &:focus {
-      @include no-focus;
-    }
-  }
+  // .m-form--search__button {
+  //   background: transparent;
+  //   border: none;
+  //   border-radius: $border-radius;
+  //   flex-shrink: 0;
+  //   .icon-search {
+  //     color: #666;
+  //   }
+  //   &:focus {
+  //     @include no-focus;
+  //   }
+  // }
 
-  /* Uses focus.js to apply styles to the whole form when the input is focused. This doesn't work for IE9 and below, or when JS is disallowed. */
-  .no-js, .lt-ie10 {
-    input[type="text"].m-form--search__input:focus {
-      @include focus;
-    }
-  }
+  // /* Uses focus.js to apply styles to the whole form when the input is focused. This doesn't work for IE9 and below, or when JS is disallowed. */
+  // .no-js, .lt-ie10 {
+  //   input[type="text"].m-form--search__input:focus {
+  //     @include focus;
+  //   }
+  // }
 </style>
