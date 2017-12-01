@@ -109,6 +109,14 @@
   optionalDependencies:
     "@types/react" "^16.0.20"
 
+"@storybook/addon-viewport@^3.3.0-alpha.0":
+  version "3.3.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-3.3.0-alpha.0.tgz#266faac372aa78d2956079dd872a305877a58e67"
+  dependencies:
+    "@storybook/components" "^3.3.0-alpha.0"
+    global "^4.3.2"
+    prop-types "^15.5.10"
+
 "@storybook/addons@^3.2.16":
   version "3.2.16"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.2.16.tgz#cbad5d9e8222aba3d5a5d06af98a095322f62cb5"
@@ -128,6 +136,14 @@
 "@storybook/components@^3.2.16":
   version "3.2.16"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.2.16.tgz#381c4ce414f139fb03b059f1f0265c6246457e7b"
+  dependencies:
+    glamor "^2.20.40"
+    glamorous "^4.11.0"
+    prop-types "^15.6.0"
+
+"@storybook/components@^3.3.0-alpha.0":
+  version "3.3.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.3.0-alpha.4.tgz#6a48d65056b42fa32bd0d544fb18017f183c7509"
   dependencies:
     glamor "^2.20.40"
     glamorous "^4.11.0"

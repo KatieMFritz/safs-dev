@@ -17,11 +17,6 @@ export default {
   components: {
     MMsuMastheadLink,
     MUtilities
-  },
-  data () {
-    return {
-      siteName: 'Sustainable Agriculture & Food Systems'
-    }
   }
 }
 </script>

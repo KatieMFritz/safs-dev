@@ -1,17 +1,43 @@
 import Demo from '../.storybook/demo'
 
 new Demo('a-label')
-  .example('Default')
-  .example('With content', {
+  .example('Short Label', {
     template: `
-      <a-label>
-        This is a label
+      <a-label
+        labelText="Latest"
+      >
+      </a-label>
+    `
+  })
+  .example('Medium Label', {
+    template: `
+      <a-label
+        labelText="Alumni Spotlight"
+      >
+      </a-label>
+    `
+  })
+  .example('Long Label', {
+    template: `
+      <a-label
+        labelText="Double Up Food Bucks"
+      >
       </a-label>
     `
   })
 
 new Demo('a-intro-text')
-  .example('Sample', {
+  .example('With heading', {
+    template: `
+      <a-intro-text>
+        <template slot="heading">This is a heading.</template>
+        <template slot="content">
+          <p>The intro text may be a lead-in to the passage of text, or it may just be used to create a visual distinction between the rest of the passage of text.</p>
+        </template>
+      </a-intro-text>
+    `
+  })
+  .example('No heading', {
     template: `
       <a-intro-text>
         <template slot="content">
@@ -33,29 +59,35 @@ new Demo('a-msu-wordmark')
 new Demo('a-site-title')
   .example('SAFS', {
     template: `
-      <a-site-title
-        siteName="Sustainable Agriculture and Food Systems"
-      >
-      </a-site-title>
+      <header>
+        <a-site-title
+          siteName="Sustainable Agriculture and Food Systems"
+        >
+        </a-site-title>
+      </header>
     `
   })
   .example('Two lines', {
     template: `
+    <header>
       <a-site-title
         siteName="Michigan State University"
         siteNameLine2="Sustainable Agriculture and Food Systems"
       >
       </a-site-title>
+    </header>
     `
   })
   .example('Three lines', {
     template: `
+    <header>
       <a-site-title
-        siteName="Michigan State University"
-        siteNameLine2="Sustainable Agriculture and Food Systems"
-        siteNameLine3="Random Third Line"
-      >
+          siteName="Michigan State University"
+          siteNameLine2="Sustainable Agriculture and Food Systems"
+          siteNameLine3="Random Third Line"
+        >
       </a-site-title>
+    </header>
     `
   })
 
@@ -93,19 +125,39 @@ new Demo('m-byline')
   })
 
 new Demo('m-blockquote')
-  .example('Default')
-  .example('Sample', {
+  .example('No footer', {
     template: `
-      <m-blockquote>
-        Here is some different blockquote text.
-        <template slot="source">
-          Anonymous
-        </template>
+      <m-blockquote
+        quoteText="Blockquote with no photo and no footer"
+      >
+      </m-blockquote>
+      `
+  })
+  .example('With footer', {
+    template: `
+      <m-blockquote
+        quoteText="Blockquote with no photo and a footer"
+        footerText="This is the footer"
+      >
+      </m-blockquote>
+      `
+  })
+  .example('With photo', {
+    template: `
+      <m-blockquote
+        quote-text="Blockquote with no photo and a footer"
+        footer-text="This is the footer"
+        photo-src="http://www.safss.msu.edu/uploads/1/1/1/2/11126970/6548446_orig.jpg"
+        photo-alt="Describes the photo"
+      >
       </m-blockquote>
       `
   })
 
-new Demo('m-nav-primary')
+new Demo('m-nav-desktop')
+  .example('Default')
+
+new Demo('m-nav-breadcrumb')
   .example('Default')
 
 new Demo('m-utilities')
@@ -115,7 +167,14 @@ new Demo('o-template-header')
   .example('Default')
 
 new Demo('o-header')
-  .example('Default')
+  .example('SAFS', {
+    template: `
+      <o-header
+        siteName="Sustainable Agriculture and Food Systems"
+      >
+      </o-header>
+    `
+  })
 
 new Demo('o-blog-post')
   .example('Sample', {

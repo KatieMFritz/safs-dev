@@ -1,5 +1,5 @@
 <template>
-  <div id="search" role="search" class="js-initial-load">
+  <div id="search" role="search">
     <form
       action="//u.search.msu.edu/index.php"
       method="get"

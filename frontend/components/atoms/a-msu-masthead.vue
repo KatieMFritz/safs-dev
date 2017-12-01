@@ -5,9 +5,3 @@
     src="../../images/msu/masthead-helmet-green.svg"
   >
 </template>
-
-<style>
-  /* .a-msu-masthead {
-    width: 100%;
-  } */
-</style>

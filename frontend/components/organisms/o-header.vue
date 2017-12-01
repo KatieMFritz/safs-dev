@@ -1,67 +1,39 @@
 <template>
-  <header class="o-header">
-    <section class="o-header__msu">
-      <MMsuMastheadLink/>
-      <MMsuSearch/>
-    </section>
-    <h1 class="o-header__site-name">{{ siteName }}</h1>
-    <MNavPrimary/>
+  <header>
+    <OTemplateHeader/>
+    <ASiteTitle
+      :siteName="siteName"
+      :siteNameLine2="siteNameLine2"
+      :siteNameLine3="siteNameLine3"
+    />
+    <MNavDesktop/>
   </header>
 </template>
 
 <script>
-import MMsuMastheadLink from '../molecules/m-msu-masthead-link.vue'
-import MMsuSearch from '../atoms/a-msu-search.vue'
-import MNavPrimary from '../molecules/m-nav-primary.vue'
+import OTemplateHeader from '../organisms/o-template-header.vue'
+import ASiteTitle from '../atoms/a-site-title.vue'
+import MNavDesktop from '../molecules/m-nav-desktop.vue'
 
 export default {
   components: {
-    MMsuMastheadLink,
-    MMsuSearch,
-    MNavPrimary
+    OTemplateHeader,
+    ASiteTitle,
+    MNavDesktop
   },
-  data () {
-    return {
-      siteName: 'Sustainable Agriculture & Food Systems'
+  props: {
+    siteName: {
+      type: String,
+      required: true
+    },
+    siteNameLine2: {
+      type: String,
+      required: false
+    },
+    siteNameLine3: {
+      type: String,
+      required: false
     }
   }
 }
 </script>
-
-<style lang="scss">
-
-  // @import '~@variables';
-  // /* MSU Web Standards: Header
-  // * @http://cabs.msu.edu/web/msu-web-standards.html#s3
-  // */
-  // .o-header {
-  //   margin: $space-stack-l;
-  // }
-
-  // .o-header__msu {
-  //   display:flex;
-  //   flex-wrap: wrap;
-  //   justify-content: space-between;
-  //   .a-msu-masthead {
-  //     max-width: 300px;
-  //     margin: $space-stack-s;
-  //   }
-  //   .m-form--search {
-  //     margin: $space-stack-s;
-  //   }
-  // }
-
-  // .o-header__site-name {
-  //   background: transparent;
-  //   color: $color-msu-green;
-  //   font-size: $font-size-base * 1.25;
-  //   margin: $space-stack-s;
-  //   @media (min-width: 400px) and (max-width: 999px) {
-  //     font-size: $font-size-base * $phi;
-  //   }
-  //   @media (min-width:1000px) {
-  //     font-size: $font-size-base * power($phi, 2);
-  //     margin: $space-stack-m;
-  //   }
-  // }
-</style>

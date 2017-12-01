@@ -3,16 +3,16 @@ import stripIndent from 'strip-indent'
 import { storiesOf } from '@storybook/vue'
 // import { linkTo } from '@storybook/addon-links'
 import { withNotes } from '@storybook/addon-notes'
-// import {
-//   withKnobs,
-//   text,
-//   number,
-//   boolean,
-//   array,
-//   select,
-//   color,
-//   date
-// } from '@storybook/addon-knobs'
+import {
+  withKnobs,
+  text,
+  number,
+  boolean,
+  array,
+  select,
+  color,
+  date
+} from '@storybook/addon-knobs'
 // import Centered from '@storybook/addon-centered'
 
 export default function Demo (componentName) {
@@ -21,6 +21,14 @@ export default function Demo (componentName) {
   this.example = (exampleName, exampleOptions) => {
     exampleOptions = exampleOptions || {
       template: `<${componentName}></${componentName}>`
+    }
+
+    const existingBeforeCreate = exampleOptions.beforeCreate
+    exampleOptions.beforeCreate = function () {
+      document.body.classList.add('template')
+      if (existingBeforeCreate) {
+        existingBeforeCreate()
+      }
     }
 
     let notes = '<h2>Usage</h2>'

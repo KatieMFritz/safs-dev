@@ -19,14 +19,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-  // @import '~@variables';
-
-  // .m-byline {
-  //   color: $color-text-muted;
-  //   font-size: $font-size-s;
-  //   margin: $space-stack-s;
-  //   padding: 0;
-  // }
-</style>
