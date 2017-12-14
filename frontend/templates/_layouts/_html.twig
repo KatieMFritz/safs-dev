@@ -10,16 +10,17 @@
  #}
 
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" class="no-js" dir="ltr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  {% if not craft.config.devMode %}
-    <link rel="stylesheet" href="/compiled/css/app.css">
-  {% endif %}
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7054272/6240972/css/fonts.css" />
+  <link rel="stylesheet" href="https://cdn.cabs.msu.edu/framework/css/vendor.min.css?v=3.0">
+  <link rel="stylesheet" href="https://cdn.cabs.msu.edu/framework/css/main.min.css?v=3.0">
+  <link rel="stylesheet" href="https://cdn.cabs.msu.edu/framework/css/print.min.css" media="print">
+  <link rel="icon" href="https://cdn.cabs.msu.edu/brand/images/favicon.ico">
 
   <title>SAFS
     {# {% if entry.title is defined %}{{ entry.title }}
@@ -30,10 +31,12 @@
   {# {% include './helpers/_site-meta' %} #}
 </head>
 
-<body>
-  <div id="app">
-    {% block layout %}{% endblock %}
-  </div>
+<body class="template template--home">
+
+  {% block layout %}{% endblock %}
+
+  <script src="https://cdn.cabs.msu.edu/framework/js/vendor.min.js"></script>
+  <script src="https://cdn.cabs.msu.edu/framework/js/main.min.js"></script>
 
   <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
   {% if craft.config.devMode %}

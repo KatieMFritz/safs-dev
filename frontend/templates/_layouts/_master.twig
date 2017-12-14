@@ -2,10 +2,88 @@
 
 {% block layout %}
 
-  <a class="sr-only" href="#content" accesskey="S">Skip to main content</a>
-
   {# Header #}
-  <o-header></o-header>
+  <a class="show-for-sr" href="#content" accesskey="S">Skip to main content</a>
+  <div class="off-canvas-wrapper">
+    <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+      <div class="off-canvas position-right" id="offcanvas-nav" data-off-canvas data-position="right">
+        <!-- search, site name, and main nav moved here for mobile -->
+      </div>
+      <div class="off-canvas-content" data-off-canvas-content>
+
+        <header>
+          <div class="template__header">
+            <div class="template__sticky-header">
+              <div class="row">
+                <div class="small-6 columns">
+                  <a href="https://msu.edu/">
+                    <img alt="Michigan State University" src="brand/images/masthead-white.svg" class="template__logo template__logo--no-helmet masthead-reg">
+                    <img alt="Michigan State University" src="brand/images/masthead-green.svg" class="template__logo template__logo--no-helmet masthead-sticky">
+                  </a>
+                </div>
+                <div class="small-6 columns template__utilities">
+                  <button type="button" class="hamburger hamburger--squeeze" id="btn-hamburger" data-toggle="offcanvas-nav">
+                    <span class="show-for-sr">Menu</span>
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                  </button>
+                  <div id="search" class="js-initial-load template__search">
+                    <form action="//u.search.msu.edu/index.php" method="get">
+                      <input name="sitesearch" type="hidden" value="msu.edu">
+                      <label class="invisible" for="q">Search</label>
+                      <input id="q" name="q" placeholder="Search...">
+                      <button id="btn_search" type="submit" value="search">
+                        <span class="show-for-sr">Search</span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div id="site-title-wrapper" class="large-9 columns">
+              <h1 id="site-title">
+                <a href="#">{{ siteName }}</a>
+              </h1>
+            </div>
+          </div>
+          <div id="desktop-nav" class="js-initial-load">
+            <div class="row">
+              <div class="large-12 columns" id="main-menu-wrapper">
+                <nav id="main-menu" aria-label="Primary navigation">
+                  <ul>
+                    <li>
+                      <a href="#">About</a>
+                    </li>
+                    <li>
+                      <a href="#">Admissions</a>
+                    </li>
+                    <li>
+                      <a href="#">Academics</a>
+                    </li>
+                    <li>
+                      <a href="#">Research</a>
+                    </li>
+                    <li>
+                      <a href="#">Global</a>
+                    </li>
+                    <li>
+                      <a href="#">Engagement</a>
+                    </li>
+                    <li>
+                      <a href="#">Athletics</a>
+                    </li>
+                    <li>
+                      <a href="#">Contact</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </header>
 
   {# Main Content #}
   <main role="main">
@@ -13,6 +91,49 @@
   </main>
 
   {# Footer #}
-  <div>Footer</div>
+        <footer class="footer">
+          <div class="row footer__standard">
+            <div class="large-12 columns">
+              <div class="footer__info">
+                <ul class="footer__info__links">
+                  <li>
+                    <a href="http://msutoday.msu.edu/contact/">Contact Information</a>
+                  </li>
+                  <li>
+                    <a href="http://msutoday.msu.edu/privacy/">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="http://msutoday.msu.edu/accessibility/">Site Accessibility</a>
+                  </li>
+                </ul>
+                <ul class="footer__info__msu">
+                  <li>Call MSU:
+                    <strong>(517) 355-1855</strong>
+                  </li>
+                  <li>Visit:
+                    <strong>
+                      <a href="http://msu.edu/">msu.edu</a>
+                    </strong>
+                  </li>
+                  <li>MSU is an affirmative-action, equal-opportunity employer.</li>
+                  <li>
+                    <a href="http://oie.msu.edu/">
+                      <strong>Notice of Nondiscrimination</strong>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="footer__info__copyright">
+                  <li>
+                    <strong>Spartans Will</strong>.</li>
+                  <li>© Michigan State University</li>
+                </ul>
+              </div>
+              <div class="footer__wordmark">
+                <a href="https://msu.edu/">
+                  <img class="screen-msuwordmark" alt="Michigan State University wordmark" src="https://cdn.cabs.msu.edu/brand/images/msu-wordmark-green.svg"> </a>
+              </div>
+            </div>
+          </div>
+        </footer>
 
 {% endblock layout %}
